@@ -18,7 +18,7 @@ class ThreadsRepositoryPostgres extends ThreadRepository {
             values: [id, title, body, owner],
         };
         const result = await this._pool.query(query);
-        return new AddedThread({...result.rows[0] });
+        return new AddedThread(result.rows[0]);
     }
 
     async checkExistsThread(threadId) {

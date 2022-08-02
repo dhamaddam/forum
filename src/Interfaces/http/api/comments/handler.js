@@ -44,12 +44,11 @@ class CommentHandler {
             owner,
         };
 
-        const data = await deleteCommentUseCase.execute(dataPayload);
+        await deleteCommentUseCase.execute(dataPayload);
 
-
-        return h.response({
+        return {
             status: 'success',
-        });
+        };
     }
 }
 module.exports = CommentHandler;

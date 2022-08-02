@@ -1,5 +1,3 @@
-const { DatabaseError } = require("pg");
-
 class DeleteCommentUseCase {
     constructor({ threadRepository, commentRepository }) {
         this._threadRepository = threadRepository;
